@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.yue.user.mapper.KhvalueMapper">
+
+	<resultMap type="com.yue.pojo.Khvalue" id="khvalueResultMap">
+		<id column="kh_Id" property="khId" />
+		<result column="kh_Name" property="khName" />
+		<result column="kh_Sexz" property="khSexz" />
+		<result column="kh_Tel" property="khTel" />
+		<result column="kh_Time" property="khTime" />
+		<result column="kh_Dz" property="khDz" />
+		<collection property="telmans" ofType="com.yue.pojo.Telman">
+			<id column="tel_Id" property="telId" />
+			<result column="tel_Name" property="telName" />
+			<result column="tel_Sexz" property="telSexz" />
+			<result column="tel_Tel" property="telTel" />
+			<result column="tel_Time" property="telTime" />
+		</collection>
+	</resultMap>
+
+	<select id="selectKhvalueAll" resultMap="">
+		SELECT * FROM KHVALUE
+	</select>
+
+</mapper>
