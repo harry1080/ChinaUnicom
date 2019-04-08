@@ -20,8 +20,14 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 		</collection>
 	</resultMap>
 
-	<select id="selectKhvalueAll" resultMap="">
+	<select id="selectKhvalueAll" resultMap="khvalueResultMap">
 		SELECT * FROM KHVALUE
+	</select>
+	
+	
+	
+	<select id="selectKhvalueById" resultMap="khvalueResultMap">
+		
 	</select>
 
 </mapper>
